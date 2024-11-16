@@ -7,24 +7,33 @@ const Body = () => {
         <img src={"/sofia.png"} alt="Sofia Chaikovska" style={styles.photo} />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Sofia Chaikovska</h2>
+          <p style={styles.position}>Software engineer</p>
         </div>
       </div>
       <div style={styles.card}>
         <img src={"roksolana.jpg"} alt="Roksolana" style={styles.photo} />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Roksolana Shendiukh</h2>
-          <p style={styles.position}>Software engineer</p>
+          <p style={styles.position}>Business analyst</p>
         </div>
       </div>
       <div style={styles.card}>
-        <img src={"/khrystyna-img.png"} alt="Khrystyna Shkirliak" style={styles.photo} />
+        <img
+          src={"/khrystyna-img.png"}
+          alt="Khrystyna Shkirliak"
+          style={styles.photo}
+        />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Khrystyna Shkirliak</h2>
           <p style={styles.position}>Scrum master</p>
-         </div>
+        </div>
       </div>
       <div style={styles.card}>
-        <img src={"/myroslav-img.png"} alt="Shchuruk Myroslav" style={styles.photo} />
+        <img
+          src={"/myroslav-img.png"}
+          alt="Shchuruk Myroslav"
+          style={styles.photo}
+        />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Shchuruk Myroslav</h2>
           <p style={styles.position}>Tester</p>
@@ -37,11 +46,15 @@ const Body = () => {
 const styles = {
   body: {
     display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     flexWrap: "wrap",
   },
   card: {
-    width: "150px",
+    width: "200px",
+    height: "200px",
     padding: "1em",
+    paddingTop: "30px",
     borderRadius: "10px",
     backgroundColor: "#fff",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -52,8 +65,8 @@ const styles = {
     alignItems: "center",
   },
   photo: {
-    width: "100px",
-    height: "100px",
+    width: "130px",
+    height: "130px",
     borderRadius: "50%",
     objectFit: "cover",
   },
@@ -68,7 +81,7 @@ const styles = {
   },
   position: {
     fontSize: "0.9em",
-    color: "#6a0dad", // Same purple color as header
+    color: "#75163F",
     margin: "0.5em 0 0 0",
   },
 };
