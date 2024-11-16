@@ -4,15 +4,26 @@ const Body = () => {
   return (
     <main style={styles.body}>
       <div style={styles.card}>
+        <img src={"/sofia.png"} alt="Sofia Chaikovska" style={styles.photo} />
+        <div style={styles.textContainer}>
+          <h2 style={styles.name}>Sofia Chaikovska</h2>
+        </div>
+      </div>
+      <div style={styles.card}>
         <img src={"roksolana.jpg"} alt="Roksolana" style={styles.photo} />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Roksolana Shendiukh</h2>
           <p style={styles.position}>Software engineer</p>
+        </div>
+      </div>
+      <div style={styles.card}>
         <img src={"/khrystyna-img.png"} alt="Khrystyna Shkirliak" style={styles.photo} />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Khrystyna Shkirliak</h2>
           <p style={styles.position}>Scrum master</p>
-
+         </div>
+      </div>
+      <div style={styles.card}>
         <img src={"/myroslav-img.png"} alt="Shchuruk Myroslav" style={styles.photo} />
         <div style={styles.textContainer}>
           <h2 style={styles.name}>Shchuruk Myroslav</h2>
