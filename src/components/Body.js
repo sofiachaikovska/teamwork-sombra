@@ -1,55 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Body = () => {
+  const [activeCard, setActiveCard] = useState(null);
+  const [info, setInfo] = useState("");
+
+  const handleCardClick = (person) => {
+    setActiveCard(person.name);
+    setInfo(person.info);
+  };
+
+  const people = [
+    {
+      name: "Sofia Chaikovska",
+      position: "Software engineer",
+      img: "/sofia.png",
+      info: "I am a Full-Stack Developer with practical experience in designing and building modern web applications. My expertise lies in creating efficient and scalable solutions using cutting-edge technologies. With a strong foundation in Node.js, I develop robust back-end systems that seamlessly handle data and ensure optimal performance. On the front end, I specialize in React, crafting dynamic and user-friendly interfaces that deliver excellent user experiences. I have hands-on experience working with MongoDB, designing and managing databases that are optimized for fast and secure data handling. Whether it’s building an entire application from scratch or improving an existing system, I enjoy turning ideas into reality.",
+    },
+    {
+      name: "Roksolana Shendiukh",
+      position: "Business analyst",
+      img: "roksolana.jpg",
+      info: "Roksolana",
+    },
+    {
+      name: "Khrystyna Shkirliak",
+      position: "Scrum master",
+      img: "/khrystyna-img.png",
+      info: "Khrystyna",
+    },
+    {
+      name: "Shchuruk Myroslav",
+      position: "Tester",
+      img: "/myroslav-img.png",
+      info: "Myroslav",
+    },
+    {
+      name: "Khomiak Denys",
+      position: "Software architect",
+      img: "/denys-img.jpg",
+      info: "Denys",
+    },
+  ];
+
   return (
     <main style={styles.body}>
-      <div style={styles.card}>
-        <img src={"/sofia.png"} alt="Sofia Chaikovska" style={styles.photo} />
-        <div style={styles.textContainer}>
-          <h2 style={styles.name}>Sofia Chaikovska</h2>
-          <p style={styles.position}>Software engineer</p>
+      {people.map((person, index) => (
+        <div
+          key={index}
+          style={{
+            ...styles.card,
+            transform: activeCard === person.name ? "scale(1.1)" : "scale(1)",
+            transition: "transform 0.3s ease",
+          }}
+          onClick={() => handleCardClick(person)}
+        >
+          <img src={person.img} alt={person.name} style={styles.photo} />
+          <div style={styles.textContainer}>
+            <h2 style={styles.name}>{person.name}</h2>
+            <p style={styles.position}>{person.position}</p>
+          </div>
         </div>
-      </div>
-      <div style={styles.card}>
-        <img src={"roksolana.jpg"} alt="Roksolana" style={styles.photo} />
-        <div style={styles.textContainer}>
-          <h2 style={styles.name}>Roksolana Shendiukh</h2>
-          <p style={styles.position}>Business analyst</p>
+      ))}
+
+      {info && (
+        <div style={styles.infoBox}>
+          <p>{info}</p>
         </div>
-      </div>
-      <div style={styles.card}>
-        <img
-          src={"/khrystyna-img.png"}
-          alt="Khrystyna Shkirliak"
-          style={styles.photo}
-        />
-        <div style={styles.textContainer}>
-          <h2 style={styles.name}>Khrystyna Shkirliak</h2>
-          <p style={styles.position}>Scrum master</p>
-        </div>
-      </div>
-      <div style={styles.card}>
-        <img
-          src={"/myroslav-img.png"}
-          alt="Shchuruk Myroslav"
-          style={styles.photo}
-        />
-        <div style={styles.textContainer}>
-          <h2 style={styles.name}>Shchuruk Myroslav</h2>
-          <p style={styles.position}>Tester</p>
-        </div>
-      </div>
-      <div style={styles.card}>
-        <img 
-          src={"/denys-img.jpg"} 
-          alt="Khomiak Denys"
-          style={styles.photo} 
-        />
-        <div style={styles.textContainer}>
-          <h2 style={styles.name}>Khomiak Denys</h2>
-          <p style={styles.position}>Software architector</p>
-        </div>
-      </div>
+      )}
     </main>
   );
 };
@@ -60,6 +77,9 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     flexWrap: "wrap",
+    position: "relative",
+    fontFamily: '"Roboto", sans-serif',
+    padding: "50px",
   },
   card: {
     width: "200px",
@@ -74,6 +94,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    cursor: "pointer",
   },
   photo: {
     width: "130px",
@@ -94,6 +115,17 @@ const styles = {
     fontSize: "0.9em",
     color: "#75163F",
     margin: "0.5em 0 0 0",
+  },
+  infoBox: {
+    marginTop: "2em",
+    padding: "1em",
+    width: "100%",
+    backgroundColor: "#75163F",
+    borderRadius: "30px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    textAlign: "center",
+    fontSize: "1em",
+    color: "#fff",
   },
 };
 
