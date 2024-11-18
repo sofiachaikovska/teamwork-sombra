@@ -16,6 +16,7 @@ const styles = {
     textAlign: "center",
     fontWeight: "bold",
     marginBottom: "40px",
+    fontFamily: '"Roboto", sans-serif',
   },
 };
 
