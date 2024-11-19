@@ -32,7 +32,7 @@ const Body = () => {
       name: "Shchuruk Myroslav",
       position: "Tester",
       img: "/myroslav-img.png",
-      info: "Myroslav",
+      info: "I am Test Engineer in my team and a student of LPNU. I specialize in software testing and quality assurance. My role involves designing and executing test cases to identify potential issues in software systems, ensuring they meet the desired quality standards and requirements.",
     },
     {
       name: "Khomiak Denys",
