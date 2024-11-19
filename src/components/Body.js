@@ -20,7 +20,7 @@ const Body = () => {
       name: "Roksolana Shendiukh",
       position: "Business analyst",
       img: "roksolana.jpg",
-      info: "Roksolana",
+      info: "I am an aspiring Business Analyst with 2 months of hands-on experience in analyzing business processes. During this time, I have gained valuable skills in gathering requirements, conducting data analysis. I am passionate about understanding business needs and translating them into actionable insights that drive efficiency and improve decision-making. As a beginner, I am eager to expand my knowledge, contribute to meaningful projects, and continuously improve my skills to add value to the organizations I work with.",
     },
     {
       name: "Khrystyna Shkirliak",
