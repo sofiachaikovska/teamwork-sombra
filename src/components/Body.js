@@ -26,7 +26,7 @@ const Body = () => {
       name: "Khrystyna Shkirliak",
       position: "Scrum master",
       img: "/khrystyna-img.png",
-      info: "Khrystyna",
+      info: "I am a Software Engineering student at LPNU. I have experience in C, C++, C#, and Assembly programming. In our team, I am a Scrum Master, so my job is to focus on the team, take steps to ensure the team and individual team members achieve success, facilitate collaboration to meet project goals effectively, and help remove obstacles that may hinder progress. I also ensure that Agile principles are followed, promote continuous improvement, and maintain clear communication between team members and stakeholders.",
     },
     {
       name: "Shchuruk Myroslav",
