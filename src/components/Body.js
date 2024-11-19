@@ -40,6 +40,12 @@ const Body = () => {
       img: "/denys-img.jpg",
       info: "I am Software Engineering student at LPNU. I have experience in C/C++, Assembly, Python programming languages. In our team, I am a Software Architect, so my job is to design the overall structure of the software system, define its main components, and ensure that the architecture aligns with the project's requirements and goals. I am responsible for selecting the appropriate technologies, tools, and frameworks, as well as establishing coding standards and design principles.",
     },
+    {
+      name: "Natalya",
+      position: "Software architect",
+      img: "/denys-img.jpg",
+      info: "I am Software Engineering student at LPNU. I have experience in C/C++, Assembly, Python programming languages. In our team, I am a Software Architect, so my job is to design the overall structure of the software system, define its main components, and ensure that the architecture aligns with the project's requirements and goals. I am responsible for selecting the appropriate technologies, tools, and frameworks, as well as establishing coding standards and design principles.",
+    },
   ];
 
   return (
